@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/flexiblePaymentIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_flexible_payment" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="342dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="505dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/flexiblePaymentSubtitle"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Different modes of payment either before and after delivery without stress"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flexiblePaymentTitle" />
+
+        <TextView
+            android:id="@+id/flexiblePaymentTitle"
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black"
+            android:text="Flexible Payment"
+            android:textAlignment="center"
+            android:textColor="@color/redi_brand_primary"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/skipButton"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="18.18dp"
+                android:paddingTop="9.38dp"
+                android:paddingRight="18.18dp"
+                android:paddingBottom="9.38dp"
+                android:text="Skip"
+                android:textColor="@color/redi_brand_primary"
+                app:cornerRadius="4.69dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/redi_brand_primary"
+                android:paddingLeft="18.18dp"
+                android:paddingTop="9.38dp"
+                android:paddingRight="18.18dp"
+                android:paddingBottom="9.38dp"
+                android:text="Next"
+                android:textColor="@color/white"
+                app:cornerRadius="4.69dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
