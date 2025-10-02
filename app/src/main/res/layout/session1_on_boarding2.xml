@@ -67,6 +67,8 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/white"
+                android:outlineAmbientShadowColor="@color/redi_brand_primary"
+                android:outlineProvider="bounds"
                 android:paddingLeft="18.18dp"
                 android:paddingTop="9.38dp"
                 android:paddingRight="18.18dp"

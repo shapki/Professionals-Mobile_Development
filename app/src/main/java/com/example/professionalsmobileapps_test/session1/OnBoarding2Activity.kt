@@ -3,15 +3,15 @@ package com.example.professionalsmobileapps_test.session1
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.professionalsmobileapps_test.databinding.OnBoarding2Binding
+import com.example.professionalsmobileapps_test.databinding.Session1OnBoarding2Binding
 
 class OnBoarding2Activity : AppCompatActivity() {
 
-    private lateinit var binding: OnBoarding2Binding
+    private lateinit var binding: Session1OnBoarding2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = OnBoarding2Binding.inflate(layoutInflater)
+        binding = Session1OnBoarding2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupClickListeners()
