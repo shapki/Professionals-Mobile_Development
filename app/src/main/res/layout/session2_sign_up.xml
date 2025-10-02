@@ -54,30 +54,149 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAnAccountContainer">
+        app:layout_constraintTop_toBottomOf="@+id/createAnAccountContainer"
+        app:layout_constraintVertical_bias="0.126">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fullnameTextInput"
-            android:layout_width="256dp"
-            android:layout_height="44dp"
-            android:outlineProvider="bounds"
-            app:boxCornerRadiusBottomEnd="4dp"
-            app:boxCornerRadiusBottomStart="4dp"
-            app:boxCornerRadiusTopEnd="4dp"
-            app:boxCornerRadiusTopStart="4dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fullNameContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:placeholderTextColor="@color/redi_text_gray1"
-            tools:layout_editor_absoluteY="69dp">
+            app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/fullnameTextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_medium"
-                android:hint="Ivanov Ivan"
-                android:textColor="@color/redi_text_black2"
+                android:text="Full name"
+                android:textColor="@color/redi_text_gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullnameTextInput"
+                android:layout_width="356dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:outlineProvider="bounds"
                 android:textColorHint="@color/redi_text_gray1"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                app:boxCornerRadiusBottomEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusTopStart="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fullnameTextView"
+                app:placeholderTextColor="@color/redi_text_gray1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Ivanov Ivan"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phoneContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullNameContainer">
+
+            <TextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Phone"
+                android:textColor="@color/redi_text_gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneTextInput"
+                android:layout_width="356dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusTopStart="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextView"
+                app:placeholderTextColor="@color/redi_text_gray1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="+7(999)999-99-99"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/emailContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneContainer">
+
+            <TextView
+                android:id="@+id/emailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Email Address"
+                android:textColor="@color/redi_text_gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTextInput"
+                android:layout_width="356dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusTopStart="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+                app:placeholderTextColor="@color/redi_text_gray1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="*************@mail.com"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
