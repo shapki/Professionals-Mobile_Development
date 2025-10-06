@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_quick_delivery" />
+        app:srcCompat="@drawable/bnr_quick_delivery" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="342dp"
