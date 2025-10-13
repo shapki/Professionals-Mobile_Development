@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/createAnAccountContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeBackFields"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
-            android:id="@+id/createAccTitle"
+            android:id="@+id/welcomeBackTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
-            android:text="Create an account"
+            android:text="Welcome Back"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -28,137 +28,43 @@
             tools:layout_editor_absoluteY="-1dp" />
 
         <TextView
-            android:id="@+id/createAccSubtitle"
+            android:id="@+id/welcomeBackSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Complete the sign up process to get started"
+            android:text="Fill in your email and password to continue"
             android:textAlignment="textStart"
             android:textColor="@color/redi_text_gray2"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/createAccTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/welcomeBackTitle" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/createAnAcoountFields"
+        android:id="@+id/welcomeBackFields"
         android:layout_width="356dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAnAccountContainer"
-        app:layout_constraintVertical_bias="0.126">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/fullNameContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/fullnameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Full name"
-                android:textColor="@color/redi_text_gray2"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/fullnameTextInput"
-                android:layout_width="356dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="10dp"
-                android:outlineProvider="bounds"
-                android:textColorHint="@color/redi_text_gray1"
-                app:boxCornerRadiusBottomEnd="4dp"
-                app:boxCornerRadiusBottomStart="4dp"
-                app:boxCornerRadiusTopEnd="4dp"
-                app:boxCornerRadiusTopStart="4dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fullnameTextView"
-                app:placeholderTextColor="@color/redi_text_gray1">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:hint="Ivanov Ivan"
-                    android:textColor="@color/redi_text_black2"
-                    android:textColorHint="@color/redi_text_gray1"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/phoneContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fullNameContainer">
-
-            <TextView
-                android:id="@+id/phoneTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Phone"
-                android:textColor="@color/redi_text_gray2"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneTextInput"
-                android:layout_width="356dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="10dp"
-                android:outlineProvider="bounds"
-                android:textColorHint="@color/redi_text_gray1"
-                app:boxCornerRadiusBottomEnd="4dp"
-                app:boxCornerRadiusBottomStart="4dp"
-                app:boxCornerRadiusTopEnd="4dp"
-                app:boxCornerRadiusTopStart="4dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phoneTextView"
-                app:placeholderTextColor="@color/redi_text_gray1">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:hint="+7(999)999-99-99"
-                    android:textColor="@color/redi_text_black2"
-                    android:textColorHint="@color/redi_text_gray1"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/emailContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phoneContainer">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/emailTextView"
@@ -203,8 +109,9 @@
             android:id="@+id/passwordContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailContainer">
 
@@ -230,64 +137,13 @@
                 app:boxCornerRadiusBottomStart="4dp"
                 app:boxCornerRadiusTopEnd="4dp"
                 app:boxCornerRadiusTopStart="4dp"
+                app:endIconDrawable="@drawable/ic_linear_eye_slash"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
-                app:placeholderTextColor="@color/redi_text_gray1"
-                app:endIconMode="password_toggle"
-                app:endIconDrawable="@drawable/ic_linear_eye_slash"
-                app:endIconTint="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:hint="**********"
-                    android:textColor="@color/redi_text_black2"
-                    android:textColorHint="@color/redi_text_gray1"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/confirmPasswordContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordContainer">
-
-            <TextView
-                android:id="@+id/confirmPasswordTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Confirm Password"
-                android:textColor="@color/redi_text_gray2"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/confirmPasswordTextInput"
-                android:layout_width="356dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="10dp"
-                android:outlineProvider="bounds"
-                android:textColorHint="@color/redi_text_gray1"
-                app:boxCornerRadiusBottomEnd="4dp"
-                app:boxCornerRadiusBottomStart="4dp"
-                app:boxCornerRadiusTopEnd="4dp"
-                app:boxCornerRadiusTopStart="4dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTextView"
-                app:placeholderTextColor="@color/redi_text_gray1"
-                app:endIconMode="password_toggle"
-                app:endIconDrawable="@drawable/ic_linear_eye_slash"
-                app:endIconTint="@color/black">
+                app:placeholderTextColor="@color/redi_text_gray1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -303,17 +159,18 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/signUpConstraintLayout"
+        android:id="@+id/logInConstraintLayout"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsCheckboxContaintLayout">
 
         <Button
-            android:id="@+id/signUpButton"
+            android:id="@+id/logInButton"
             android:layout_width="342dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/redi_text_gray2"
@@ -321,18 +178,18 @@
             android:paddingTop="9.38dp"
             android:paddingRight="18.18dp"
             android:paddingBottom="9.38dp"
-            android:text="Sign Up"
+            android:text="Log in"
             android:textColor="@color/white"
             app:cornerRadius="4.69dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/signInContaintLayout"
+            android:id="@+id/signUpContaintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/signUpButton">
+            app:layout_constraintTop_toBottomOf="@+id/logInButton">
 
             <TextView
                 android:id="@+id/signInText"
@@ -347,12 +204,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/signInLink"
+                android:id="@+id/signUpLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:paddingLeft="2dp"
-                android:text="Sign In"
+                android:text="Sign Up"
                 android:textColor="@color/redi_brand_primary"
                 android:textSize="14dp"
                 app:layout_constraintStart_toEndOf="@+id/signInText"
@@ -361,7 +218,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/signInTextGoogle"
+            android:id="@+id/logInTextGoogle"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="129dp"
@@ -369,12 +226,12 @@
             android:layout_marginEnd="117dp"
             android:fontFamily="@font/roboto"
             android:paddingRight="2dp"
-            android:text="or sign in using"
+            android:text="or log in using"
             android:textColor="@color/redi_text_gray2"
             android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/signInContaintLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/signUpContaintLayout" />
 
         <ImageView
             android:id="@+id/signInGoogleImageView"
@@ -384,7 +241,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/signInTextGoogle"
+            app:layout_constraintTop_toBottomOf="@+id/logInTextGoogle"
             app:srcCompat="@drawable/ic_google" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -393,59 +250,44 @@
         android:id="@+id/termsCheckboxContaintLayout"
         android:layout_width="409dp"
         android:layout_height="31dp"
-        app:layout_constraintBottom_toTopOf="@+id/signUpConstraintLayout"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAnAcoountFields">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/termsCheckboxText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:paddingRight="2dp"
-                android:text="By ticking this box, you agree to our"
-                android:textColor="@color/redi_text_gray2"
-                android:textSize="12dp"
-                tools:layout_editor_absoluteY="1dp" />
-
-            <TextView
-                android:id="@+id/termsCheckboxTextLink1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:paddingRight="2dp"
-                android:text="Terms and"
-                android:textColor="@color/redi_state_warning"
-                android:textSize="12dp"
-                app:layout_constraintStart_toEndOf="@+id/termsCheckboxText"
-                tools:layout_editor_absoluteY="1dp" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/welcomeBackFields">
 
         <TextView
-            android:id="@+id/termsCheckboxTextLink"
+            android:id="@+id/forgotPasswordTextLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
+            android:layout_marginEnd="28dp"
+            android:fontFamily="@font/roboto_bold"
             android:paddingRight="2dp"
-            android:text="conditions and private policy"
-            android:textColor="@color/redi_state_warning"
+            android:text="Forgot password?"
+            android:textColor="@color/redi_brand_primary"
             android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rememberPasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="240dp"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingRight="2dp"
+            android:text="Remember password"
+            android:textColor="@color/redi_text_gray2"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rememberPasswordCheckBox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.466" />
 
         <CheckBox
-            android:id="@+id/termsCheckBox"
+            android:id="@+id/rememberPasswordCheckBox"
             style="@style/CustomCheckBoxStyle"
             android:layout_width="21dp"
             android:layout_height="21dp"
