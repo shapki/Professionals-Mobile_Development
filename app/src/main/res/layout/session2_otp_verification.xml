@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createAnAccountContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeBackFields"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/otpVerificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="OTP Verification"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-1dp" />
+
+        <TextView
+            android:id="@+id/otpVerificationSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Enter the 6 digit number sent to your email"
+            android:textAlignment="textStart"
+            android:textColor="@color/redi_text_gray2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpVerificationTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomeBackFields"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32999998">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/otpContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp1TextInput"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="0dp"
+                app:boxCornerRadiusBottomStart="0dp"
+                app:boxCornerRadiusTopEnd="0dp"
+                app:boxCornerRadiusTopStart="0dp"
+                app:placeholderTextColor="@color/redi_text_gray1"
+                tools:layout_editor_absoluteY="29dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp2TextInput"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="0dp"
+                app:boxCornerRadiusBottomStart="0dp"
+                app:boxCornerRadiusTopEnd="0dp"
+                app:boxCornerRadiusTopStart="0dp"
+                app:layout_constraintStart_toEndOf="@+id/otp1TextInput"
+                app:placeholderTextColor="@color/redi_text_gray1"
+                tools:layout_editor_absoluteY="29dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp3TextInput"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="0dp"
+                app:boxCornerRadiusBottomStart="0dp"
+                app:boxCornerRadiusTopEnd="0dp"
+                app:boxCornerRadiusTopStart="0dp"
+                app:layout_constraintStart_toEndOf="@+id/otp2TextInput"
+                app:placeholderTextColor="@color/redi_text_gray1"
+                tools:layout_editor_absoluteY="29dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp4TextInput"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="0dp"
+                app:boxCornerRadiusBottomStart="0dp"
+                app:boxCornerRadiusTopEnd="0dp"
+                app:boxCornerRadiusTopStart="0dp"
+                app:layout_constraintStart_toEndOf="@+id/otp3TextInput"
+                app:placeholderTextColor="@color/redi_text_gray1"
+                tools:layout_editor_absoluteY="29dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp5TextInput"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="0dp"
+                app:boxCornerRadiusBottomStart="0dp"
+                app:boxCornerRadiusTopEnd="0dp"
+                app:boxCornerRadiusTopStart="0dp"
+                app:layout_constraintStart_toEndOf="@+id/otp4TextInput"
+                app:placeholderTextColor="@color/redi_text_gray1"
+                tools:layout_editor_absoluteY="29dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp6TextInput"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
+                android:outlineProvider="bounds"
+                android:textColorHint="@color/redi_text_gray1"
+                app:boxCornerRadiusBottomEnd="0dp"
+                app:boxCornerRadiusBottomStart="0dp"
+                app:boxCornerRadiusTopEnd="0dp"
+                app:boxCornerRadiusTopStart="0dp"
+                app:layout_constraintStart_toEndOf="@+id/otp5TextInput"
+                app:placeholderTextColor="@color/redi_text_gray1"
+                tools:layout_editor_absoluteY="29dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/redi_text_black2"
+                    android:textColorHint="@color/redi_text_gray1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logInConstraintLayout"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeBackFields"
+        app:layout_constraintVertical_bias="0.318">
+
+        <Button
+            android:id="@+id/setNewPasswordButton"
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/redi_text_gray2"
+            android:paddingLeft="18.18dp"
+            android:paddingTop="9.38dp"
+            android:paddingRight="18.18dp"
+            android:paddingBottom="9.38dp"
+            android:text="Set New Password"
+            android:textColor="@color/white"
+            app:cornerRadius="4.69dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/signUpContaintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setNewPasswordButton">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/resendTimerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto"
+        android:paddingRight="2dp"
+        android:text="If you didn't receive code, resend after 1:00"
+        android:textColor="@color/redi_text_gray2"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/logInConstraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeBackFields"
+        app:layout_constraintVertical_bias="0.274" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
