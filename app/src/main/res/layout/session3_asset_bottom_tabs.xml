@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomTabsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:elevation="10dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/bottomTabs_homeIndicator"
+            android:layout_width="32dp"
+            android:layout_height="4dp"
+            android:background="@drawable/glow_bar_drawable"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/bottomTabs_homeConstraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/bottomTabs_homeConstraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/bottomTabs_homeConstraintLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomTabs_homeConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bottomTabs_walletConstraintLayout"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/bottomTabs_homeImageView"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_linear_house"
+                app:tint="@color/redi_text_gray2" />
+
+            <TextView
+                android:id="@+id/bottomTabs_homeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Home"
+                android:textAlignment="center"
+                android:textColor="@color/redi_text_gray2"
+                android:textFontWeight="400"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bottomTabs_homeImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/bottomTabs_walletIndicator"
+            android:layout_width="32dp"
+            android:layout_height="4dp"
+            android:background="@drawable/glow_bar_drawable"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/bottomTabs_walletConstraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/bottomTabs_walletConstraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/bottomTabs_walletConstraintLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomTabs_walletConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bottomTabs_trackConstraintLayout"
+            app:layout_constraintStart_toEndOf="@+id/bottomTabs_homeConstraintLayout">
+
+            <ImageView
+                android:id="@+id/bottomTabs_walletImageView"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_linear_wallet"
+                app:tint="@color/redi_text_gray2" />
+
+            <TextView
+                android:id="@+id/bottomTabs_walletTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Wallet"
+                android:textAlignment="center"
+                android:textColor="@color/redi_text_gray2"
+                android:textFontWeight="400"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bottomTabs_walletImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/bottomTabs_trackIndicator"
+            android:layout_width="32dp"
+            android:layout_height="4dp"
+            android:background="@drawable/glow_bar_drawable"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/bottomTabs_trackConstraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/bottomTabs_trackConstraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/bottomTabs_trackConstraintLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomTabs_trackConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bottomTabs_profileConstraintLayout"
+            app:layout_constraintStart_toEndOf="@+id/bottomTabs_walletConstraintLayout">
+
+            <ImageView
+                android:id="@+id/bottomTabs_trackImageView"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_linear_smart_car"
+                app:tint="@color/redi_text_gray2" />
+
+            <TextView
+                android:id="@+id/bottomTabs_trackTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Track"
+                android:textAlignment="center"
+                android:textColor="@color/redi_text_gray2"
+                android:textFontWeight="400"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bottomTabs_trackImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/bottomTabs_profileIndicator"
+            android:layout_width="32dp"
+            android:layout_height="4dp"
+            android:background="@drawable/glow_bar_drawable"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/bottomTabs_profileConstraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/bottomTabs_profileConstraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/bottomTabs_profileConstraintLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomTabs_profileConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bottomTabs_trackConstraintLayout">
+
+            <ImageView
+                android:id="@+id/bottomTabs_profileImageView"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_linear_profile_circle"
+                app:tint="@color/redi_text_gray2" />
+
+            <TextView
+                android:id="@+id/bottomTabs_profileTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Profile"
+                android:textAlignment="center"
+                android:textColor="@color/redi_text_gray2"
+                android:textFontWeight="400"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bottomTabs_profileImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
