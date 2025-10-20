@@ -12,4 +12,5 @@
     <color name="redi_text_black2">#141414</color>
     <color name="redi_text_gray1">#CFCFCF</color>
     <color name="redi_text_gray2">#A7A7A7</color>
+    <color name="app_background">#FFFFFFFF</color>
 </resources>
